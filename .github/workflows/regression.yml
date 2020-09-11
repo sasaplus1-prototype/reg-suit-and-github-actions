@@ -31,8 +31,8 @@ jobs:
         if: github.ref == 'refs/heads/master'
       - run: node index.js expected
         if: github.ref != 'refs/heads/master'
-      - run: yarn reg-cli ./actual ./expected ./report -R ./report/index.html
-      - run: zip -r ./regression-test.zip ./actual ./expected ./report
+      - run: yarn reg-cli ./actual ./expected ./report -R ./index.html
+      - run: zip -r ./regression-test.zip ./actual ./expected ./report ./index.html
         if: always()
       - uses: actions/upload-artifact@v2
         if: always()
