@@ -37,5 +37,5 @@ jobs:
       - uses: actions/upload-artifact@v2
         if: always()
         with:
-          name: regression-test.zip
+          name: regression-test
           path: regression-test.zip
