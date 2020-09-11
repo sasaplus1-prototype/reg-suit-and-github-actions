@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "devDependencies": {
+    "puppeteer": "^5.3.0",
+    "reg-cli": "^0.16.1"
+  }
+}
