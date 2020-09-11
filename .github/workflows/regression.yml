@@ -27,9 +27,9 @@ jobs:
         with:
           path: actual
           key: regression-master
-      - run: node index.js actual
+      - run: node index.js reg-test/actual
         if: github.ref == 'refs/heads/master'
-      - run: node index.js expected
+      - run: node index.js reg-test/expected
         if: github.ref != 'refs/heads/master'
       - run: yarn reg-cli ./reg-test/actual ./reg-test/expected ./reg-test/report -R ./reg-test/index.html
         if: always()
