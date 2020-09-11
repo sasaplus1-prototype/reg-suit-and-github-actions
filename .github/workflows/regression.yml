@@ -25,7 +25,7 @@ jobs:
       - run: yarn install --frozen-lockfile
       - uses: actions/cache@v2
         with:
-          path: actual
+          path: reg-test/actual
           key: regression-master
       - run: node index.js reg-test/actual
         if: github.ref == 'refs/heads/master'
